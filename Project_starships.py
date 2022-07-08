@@ -39,7 +39,7 @@ def replace_with_id(starship):  # To replace api urls with character obj ids
     return starship
 
 
-def insert_doc(starship_response):  # To insert the document into starships collection
+def insert_doc(starship_response):  # To insert the document into starships collection.
     for starship in starship_response.json()['results']:
         starships.insert_one(replace_with_id(starship))
 
